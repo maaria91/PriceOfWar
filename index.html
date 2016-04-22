@@ -1,0 +1,50 @@
+<html>
+
+<head>
+    <meta charset="UTF-8">
+    <style>
+        body {
+            padding: 0;
+            margin: 0;
+        }
+
+    </style>
+    <script language="javascript" type="text/javascript" src="libraries/p5.js"></script>
+    <script language="javascript" src="libraries/p5.dom.js"></script>
+    <script language="javascript" src="libraries/p5.sound.js"></script>
+    <script language="javascript" src="libraries/p5.collide2d.js"></script>
+    <script language="javascript" type="text/javascript" src="sketch.js"></script>
+    <link href="style.css" rel="stylesheet" />
+</head>
+
+<body>
+    <div id="myContainer"></div>
+    <div id="others">
+        <h1>The Price of War</h1>
+        <p>This interactive visualizations was a project done by Maaria Assami as 
+            <br /> part of the Design Studio 2 class in the Information Design and    
+            <br /> Visualization MFA program during the Spring 2016 semester under the  
+            <br /> instruction of Pedro Cruz. It captures the grim history surrounding the   
+            <br /> different interstate wars that took place between 1823 and 2003, and 
+            <br /> the blood price and casualties that was paid due to each war.
+            <br />
+            <br /> After hovering over the desired timeframe on the timeline, you will see the
+            <br />number of wars that were fought during that period. The bloodier the 
+            <br /> time period, the more the drop fills up with circles. Each circle represents a
+            <br /> war with it’s area being the number of casualties, and it’s color being the 
+            <br />duration of the war. You can then hover over the different circles to explore
+            <br />more about the wars the different circles represent.
+            <br />
+            <br />Data source: www.correlatesofwar.org
+        </p>
+        <p2></p2>
+        <br>
+
+        <img id="legend1" src="assets/Legand2c.png" alt="timeline"/>
+      
+    </div>
+    
+    <img id="timeline" src="assets/DropsDIVTIMELINE-04.svg" alt="timeline"/>
+</body>
+
+</html>

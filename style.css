@@ -1,0 +1,66 @@
+/*------------Global-------------*/
+
+html,
+body {
+    background: rgb(50, 50, 50);
+
+}
+
+#myContainer{
+    border: 3px solid black;
+}
+
+/*------------Image-------------*/
+
+img {
+  
+}
+
+/*------------Timeline-------------*/
+
+#timeline {
+    position: absolute;
+    top: 642px;
+    width: 996px;
+
+/*    left: 16%;*/
+    left: 233px;
+    
+}
+
+/*------------Legend-------------*/
+
+#legend1 {
+      width: 250px;
+    float: left;
+}
+
+/*----------Header&Text-----------*/
+
+h1 {
+    font-family: 'Franklin Gothic Medium', 'Franklin Gothic', 'ITC Franklin Gothic', Arial, sans-serif;
+    font-size: 45px;
+    font-style: normal;
+    font-variant: normal;
+    font-weight: 900;
+    color: rgb(165, 17, 14);
+    
+
+}
+p {
+    font-family: 'Franklin Gothic', 'Franklin Gothic', 'ITC Franklin Gothic', Arial, sans-serif;
+    font-size: 11px;
+    line-height: 1.4em;
+    color: rgb(153, 153, 153);
+
+}
+
+
+
+#others{
+    font-family: 'Franklin Gothic', 'Franklin Gothic', 'ITC Franklin Gothic', Arial, sans-serif;
+    position: absolute;
+    top: 0;
+    left: 0;
+    margin-left: 20px;
+}
