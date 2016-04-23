@@ -7,7 +7,7 @@ body {
 }
 
 #myContainer{
-    border: 3px solid black;
+/*    border: 3px solid black;*/
 }
 
 /*------------Image-------------*/
@@ -31,8 +31,10 @@ img {
 /*------------Legend-------------*/
 
 #legend1 {
-      width: 250px;
+      width: 229.5px;
+    height: 153.6px;
     float: left;
+
 }
 
 /*----------Header&Text-----------*/

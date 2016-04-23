@@ -216,11 +216,12 @@ function draw() { //HERE we beging the drawing process.. everythign we want to d
 
 
     function MousePos(circle) {
-        //print(circle);
+        print(circle);
+      
         var mPos = createVector(mouseX, mouseY);
         var cpos = createVector(circle.pos.x + SHIFT.x, circle.pos.y + SHIFT.y);
         print(circle.radius + " " + mPos.dist(cpos));
-
+    
         if (mPos.dist(cpos) <= circle.radius) {
 
 
@@ -240,7 +241,7 @@ function draw() { //HERE we beging the drawing process.. everythign we want to d
             warEndDate = circle.war.WNendDate
             Casualties = circle.war.totalDeaths
 
-            details = circle.war.name + "  " + warStartDate + "-" + warEndDate  +"\n" + nfc(Casualties, 0) + " casualties";
+            details = circle.war.name + "   " + warStartDate + "-" + warEndDate  +"\n" + nfc(Casualties, 0) + " casualties";
 
 
             //drawing the toolip
@@ -248,12 +249,14 @@ function draw() { //HERE we beging the drawing process.. everythign we want to d
             noStroke();
             fill(150);
             textSize(11);
-            textLeading(15);
-            text(details, mouseX + 30, mouseY)
-
+            textLeading(18);
+            text(details, 900 , 405)
             pop();
+            
+            
 
         }
+        
 
 
     }
@@ -429,6 +432,7 @@ var Circle = function (war) { //the position and movement of circles
 
     //REACTION TO YELLOW CAGE
     this.draw = function () { //DRAWING the circles after we gave it all the above charactaristics 
+        push();
         noStroke();
 
         //Color scale for circles
@@ -438,7 +442,7 @@ var Circle = function (war) { //the position and movement of circles
         fill(red, 0, 0);
 
         ellipse(this.pos.x, this.pos.y, this.radius * 2, this.radius * 2);
-
+        pop();
     }
 }
 
@@ -464,23 +468,33 @@ var SelectRect = function (start, end) {
     var yearsSpan = this.end - this.start;
 
     this.width = map(yearsSpan, 0, 2003 - 1823, 0, totalWidth);
-    this.height = 10;
+    this.height = 13;
 
 
-    this.x1 = map(this.start, 1823, 2003, 0, totalWidth) + 292;
+    this.x1 = map(this.start, 1823, 2003, 0, totalWidth) + 298;
     this.x2 = this.width + this.x1;
-    this.y1 = 642 + 15;
+    this.y1 = 642 + 10;
     this.y2 = this.height + this.y1;
 
-    this.draw = function () {
-        stroke("teal");
-        noFill();
-        //noStroke();
+     this.draw = function () {
+//        stroke("teal");
+        noStroke()
+        textSize(24);
+//        fill("red");
+//        fill(150, 150, 150);
+//        noStroke();
         if (this.active) {
-            fill(102, 0, 0, 70);
+            fill(255, 0, 0, 50);
         } else noFill();
-        //print(this.active);
-        //rect(this.x1, this.y1, this.width, this.height);
+        //print(this.active);\
+//        noFill()
+        rect(this.x1, this.y1+6, this.width, this.height);
+//        text(this.start, this.x1, this.y1);
+//        text(this.end, this.x1, this.y1);
+//        text(this.start, this.x1, this.y1);
+//        text(this.end, this.x1+140, this.y1);
+//        
+//        fill(0, 102, 153);
         //print(this.x1);
     }
 
